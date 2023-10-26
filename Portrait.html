@@ -1,113 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!--CSS-->
-<style>
+    <style>
+      #logo img {
+        height: 200px;
+        width: 200px;
+      }
 
-#logo img {
-  height: 200px;
-  width: 200px;
-}
+      /* Navigation Bar */
+      .navbar .dropdown-menu {
+        overflow: hidden;
+      }
 
+      .navbar {
+        list-style: none;
+      }
 
-/* Navigation Bar */
-.navbar .dropdown-menu {
-  overflow: hidden;
-}
+      .navbar a {
+        text-decoration: none;
+        color: #383737;
+        font-weight: 500;
+        margin-left: 50px;
+        position: relative;
+      }
 
-.navbar {
-  list-style: none;  
-}
+      .navbar a::before {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 0;
+        height: 3px;
+        background: #383737;
+        transition: 0.4s;
+      }
 
-.navbar a { 
-  text-decoration: none;
-  color: #383737;
-  font-weight: 500;
-  margin-left: 50px;
-  position: relative;
-}
+      .navbar a:hover::before {
+        width: 100%;
+      }
 
-.navbar a::before {
-  content: '';
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 0;
-  height: 3px;
-  background: #383737;
-  transition: .4s;
+      /* Footer */
+      .copyright-footer {
+        text-align: center;
+        display: flex;
+      }
 
-}
+      footer .logo {
+        border-right: grey solid;
+        border-left: grey solid;
+        margin-left: 50px;
+        margin-right: 50px;
+        padding-left: 50px;
+        padding-right: 50px;
+      }
+      footer a {
+        text-decoration: none;
+      }
 
-.navbar a:hover::before {
-  width: 100%;
-}
+      h1 {
+        text-align: center;
+      }
 
-
-
-/* Footer */
-.copyright-footer {
-  text-align: center;
-  display: flex;
-}
-
-footer .logo{
-  border-right: grey solid;
-  border-left: grey solid;
-  margin-left: 50px;
-  margin-right: 50px;
-  padding-left: 50px;
-  padding-right: 50px;
-  
-}
-footer a {
-  text-decoration: none;
-}
-
-h1 {
-    text-align: center;
-}
-
-.centered {
+      .centered {
         text-align: margin;
         margin: 0 auto;
         width: 50%;
-    }
+      }
 
-.portrait {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    justify-content: center;
+      .portrait {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: center;
+      }
 
-  }
+      .portrait img {
+        margin: 10px;
+        max-width: 15vw;
 
-.portrait img {
-    margin: 10px;
-    max-width: 15vw;
+        filter: gray;
+        -webkit-filter: grayscale(1);
+        -webkit-transition: all 0.8s ease-in-out;
+      }
 
-    filter: gray;
-    -webkit-filter: grayscale(1);
-    -webkit-transition: all .8s ease-in-out;
-  }
+      .portrait img:hover {
+        filter: none;
+        -webkit-filter: grayscale(0);
+        -webkit-transform: scale(1.01);
+      }
 
-.portrait img:hover {
-    filter: none;
-    -webkit-filter: grayscale(0);
-    -webkit-transform: scale(1.01);
-  }
- 
-.copyright-footer {
-  padding: 20px 0 15px;
-}
-
-
-
-</style>
-
+      .copyright-footer {
+        padding: 20px 0 15px;
+      }
+    </style>
 
     <title>Portrait</title>
     <!--BOOTSTRAP-->
@@ -117,11 +106,15 @@ h1 {
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
-</head>
-<body>
+  </head>
+  <body>
     <!-- HEADER -->
     <header class="main_header text-center">
-      <div id="logo"><img src="Photog/Logo.jpg" /></div>
+      <div id="logo">
+        <a href="index.html">
+          <img src="Photog/Logo.jpg" alt="logo" />
+        </a>
+      </div>
     </header>
     <!-- END OF HEADER -->
 
@@ -172,24 +165,22 @@ h1 {
       </div>
     </nav>
     <!-- END OF NAVIGATION -->
-    
-        <h1>Portrait</h1>
+
+    <h1>Portrait</h1>
 
     <div class="centered">
-    <hr>
+      <hr />
 
-<main class="portrait">
-    <img src="PORTRAIT/port1.jpg">
-    <img src="PORTRAIT/port2.jpg">
-    <img src="PORTRAIT/port3.jpg">
-    <img src="PORTRAIT/port4.jpg">
-    <img src="PORTRAIT/port5.jpg">
-</main>
-
-
+      <main class="portrait">
+        <img src="PORTRAIT/port1.jpg" />
+        <img src="PORTRAIT/port2.jpg" />
+        <img src="PORTRAIT/port3.jpg" />
+        <img src="PORTRAIT/port4.jpg" />
+        <img src="PORTRAIT/port5.jpg" />
+      </main>
     </div>
 
-<!-- FOOTER -->
+    <!-- FOOTER -->
     <footer>
       <div class="copyright-footer justify-content-center" id="">
         <div class="contact">
@@ -252,24 +243,23 @@ h1 {
         <div class="social">
           <!--FB-->
           <a href="https://www.facebook.com/PrincessZeenaUy/" target="_blank">
-            <img src="Photog/fblogo.png" alt="Facebook"/>
+            <img src="Photog/fblogo.png" alt="Facebook" />
           </a>
-          
+
           <!--INSTAGRAM-->
           <a href="https://www.instagram.com/zeenaa_uy/" target="_blank">
-            <img src="Photog/instaLogo.png" alt="Instagram"/>
+            <img src="Photog/instaLogo.png" alt="Instagram" />
           </a>
-          
         </div>
       </div>
     </footer>
     <!--END OF FOOTER -->
 
-<!--BOOTSTRAP-->
+    <!--BOOTSTRAP-->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
     ></script>
-</body>
+  </body>
 </html>
